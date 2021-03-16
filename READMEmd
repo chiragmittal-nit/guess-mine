@@ -1,0 +1,10 @@
+# Guess Mine
+
+Realtime Drawing Game developed using SocketIO, node.
+
+## To Do :
+
+- [ ] Server
+- [ ] Pug
+- [ ] Static
+- [ ] SocketIO
