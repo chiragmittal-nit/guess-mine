@@ -5,17 +5,32 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:server": "nodemon --exec babel-node src/server.js"
+    "dev:server": "nodemon --exec babel-node src/server.js --ignore src/public --ignore assets/",
+    "dev:assets": "gulp"
   },
   "author": "Chirag Mittal",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "nodemon": "^2.0.7",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "webpack-stream": "^6.1.2"
   },
   "dependencies": {
     "@babel/core": "^7.13.10",
     "@babel/node": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
+    "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "pug": "^3.0.2",
     "socket.io": "^4.0.0"

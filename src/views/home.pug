@@ -4,6 +4,34 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Guess Mine
+        link(rel="stylesheet", href="styles.min.css")
+        title #{title}
     body 
-        h1 Hello World
+        div.loginBox
+            form#jsLogin
+                input(placeholder="Whats your nickname", type="text")
+        div.gameContainer#jsGame
+            div.main
+                #jsNotifs
+                canvas.canvas#jsCanvas
+                div.controls#jsControls
+                    button#jsMode Fill
+                    div.colors
+                        div.color.jsColor(style="background-color:rgb(0, 0, 0)")
+                        div.color.jsColor(style="background-color:rgb(255,255,255)")
+                        div.color.jsColor(style="background-color:rgb(255,59,48)")
+                        div.color.jsColor(style="background-color:rgb(255,149,0)")
+                        div.color.jsColor(style="background-color:rgb(255,204,0)")
+                        div.color.jsColor(style="background-color:rgb(76,217,100)")
+                        div.color.jsColor(style="background-color:rgb(90,200,250)")
+                        div.color.jsColor(style="background-color:rgb(0,122,255)")
+                        div.color.jsColor(style="background-color:rgb(88,86,214)")
+            div.chat
+                div.player__board#jsPBoard
+                ul.chat__messages#jsMessages
+                form.chat__form#jsSendMsg
+                    input(placeholder="Write a message", type="text")
+        script.
+            window.events = !{JSON.stringify(events)}
+        script(src="/socket.io/socket.io.js") 
+        script(src="bundle.min.js") 
