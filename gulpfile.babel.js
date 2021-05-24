@@ -14,14 +14,14 @@ sass.compiler = require("node-sass"); // don't know what it does , just copied f
 
 const path = {
   scss: {
-    src: "assets/scss/styles.scss",
+    src: "src/assets/scss/styles.scss",
     dest: "src/public",
-    watch: "assets/scss/**/*.scss",
+    watch: "src/assets/scss/**/*.scss",
   },
   js: {
-    src: "assets/js/main.js",
+    src: "src/assets/js/main.js",
     dest: "src/public",
-    watch: "assets/js/**/*.js",
+    watch: "src/assets/js/**/*.js",
   },
 };
 
